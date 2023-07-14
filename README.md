@@ -4,12 +4,17 @@ This is a very simple sub-goal / project tracker app built with Python's flutter
 
 ## Dependencies
 
-The `main.py` python file uses both flet and datetime libraries. Thus, you need to install them through the commands below to edit the python file.
+The `main.py` python file uses both flet and datetime libraries. Furthermore, pyinstaller is needed to pack the app. Thus, you need to install them through the commands below to edit the python file.
 ```
 pip install flet
 pip install datetime
+pip install pyinstaller
 ```
 
 ## Usage
 
-The app is already packaged in the `/dist` folder as an `.exe` file. Simply run the file to launch the app. Any data should be saved on client.
+The app needs to be packaged by running the command below while on the same directory as `main.py`.
+```
+flet pack main.py
+```
+This will create a `main.exe` file in `/dist` directory. Simply run the file to launch the app. Any data should be saved on client.
